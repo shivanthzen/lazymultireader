@@ -18,6 +18,7 @@ import (
 	"log"
 	"os"
 	"strings"
+        "github.com/shivanthzen/lazymultireader"
 )
 
 
