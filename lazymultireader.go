@@ -31,6 +31,9 @@ func NewLazyMultiReader(s ...ReadOpener) io.Reader {
 }
 
 func (mr *LazyMultiReader) Read(p []byte) (n int, err error) {
+	if mr.reader == nil {
+		return 0, io.EOF
+	}
 	for len(mr.readers) > 0 {
 		n, err = mr.reader.Read(p)
 		if err == io.EOF {
