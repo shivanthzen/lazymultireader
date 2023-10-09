@@ -21,6 +21,9 @@ type LazyMultiReader struct {
 }
 
 func NewLazyMultiReader(s ...ReadOpener) io.Reader {
+	if s[0].Open() != nil {
+		return nil
+	}
 	return &LazyMultiReader{
 		s[0],
 		s,
