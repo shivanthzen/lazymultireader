@@ -1,6 +1,6 @@
 # LazyMultiReader
 
-*LazyMultiReader* is an alternative package for *io.MultiReader*, where the composing reader streams are only opened when they are read from. It can be used when the underlying readers are prone to timeouts, especially for socket/network connections.
+`LazyMultiReader` is an alternative package for `io.MultiReader`, where the composing reader streams are only opened when they are read from. It can be used when the underlying readers are prone to timeouts, especially for socket/network connections.
 
 ## Installation
 
